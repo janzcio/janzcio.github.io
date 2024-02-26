@@ -415,7 +415,7 @@ mark,
 }
 
 .img-fluid {
-  max-width: 100%;
+  max-width: 60%;
   height: auto;
 }
 
@@ -450,6 +450,13 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
+
+.ftco-animate a.partner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
@@ -2379,7 +2386,7 @@ h5,
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 800;
-  color: #3e64ff;
+  color: gray;
   letter-spacing: 4px;
 }
 
@@ -2395,10 +2402,13 @@ h5,
 
 .slider-text h2 {
   font-weight: 800;
+  color: gray;
+  font-size: 16px;
 }
 .slider-text h2 span {
   color: #3e64ff;
   text-decoration: underline;
+  font-size: 16px;
 }
 
 .slider-text p {
@@ -3652,6 +3662,16 @@ textarea.form-control {
   -webkit-animation: loader-dash 1.5s ease-in-out infinite;
   animation: loader-dash 1.5s ease-in-out infinite;
   stroke-linecap: round;
+}
+
+#page-1 .school-logo-container>img {
+  width: 4rem;
+  height: auto;
+}
+
+.page-logo img{
+  width: 3.5rem;
+  height: auto;
 }
 
 @keyframes loader-rotate {
