@@ -451,7 +451,7 @@ pre code {
   margin-left: auto;
 }
 
-.shadow-1{
+.shadow-1 {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
@@ -3177,9 +3177,9 @@ textarea.form-control {
   top: 0px;
   left: 0;
   font-size: 7vw;
-  color: rgba(255, 255, 255, 0.1);
-  z-index: -1;
-  font-weight: 900;
+  color: rgb(0 0 0 / 4%);
+  z-index: 1;
+  font-weight: 700;
 }
 .heading-section h1.big.big-2 {
   right: 0;
@@ -3671,12 +3671,12 @@ textarea.form-control {
   stroke-linecap: round;
 }
 
-#page-1 .school-logo-container>img {
+#page-1 .school-logo-container > img {
   width: 4rem;
   height: auto;
 }
 
-.page-logo img{
+.page-logo img {
   width: 5rem;
   height: auto;
 }
