@@ -2580,6 +2580,7 @@ h5,
   width: 100%;
   position: relative;
   z-index: 1;
+  border-radius: 0.5rem 7.5rem 0.5rem;
 }
 
 .ftco-about ul.about-info {
@@ -2920,7 +2921,7 @@ h5,
   right: 0;
   bottom: 0;
   content: "";
-  background: #3e64ff;
+  background: #999999;
   opacity: 0.7;
 }
 .ftco-hireme h2 {
