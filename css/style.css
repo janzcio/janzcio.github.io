@@ -2639,9 +2639,10 @@ h5,
   color: #000000;
 }
 #navi li a.current {
-  color: #3e64ff;
+  color: #000000e6;
   margin-left: 20px;
   position: relative;
+  font-weight: 700;
 }
 #navi li a.current:after {
   position: absolute;
@@ -2653,7 +2654,7 @@ h5,
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  background: #3e64ff;
+  background: #000000e6;
 }
 
 .page {
@@ -2667,7 +2668,7 @@ h5,
   font-weight: 800;
   font-size: 30px;
   margin-bottom: 30px;
-  color: #3e64ff;
+  color: #000000e6;
 }
 
 .resume-wrap {
@@ -2679,7 +2680,7 @@ h5,
 .resume-wrap .icon {
   width: 50px;
   height: 50px;
-  background: #3e64ff;
+  background: #000000e6;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -2696,7 +2697,7 @@ h5,
   font-weight: 700;
   font-size: 16px;
   color: rgba(0, 0, 0, 0.6);
-  color: #3e64ff;
+  color: #000000e6;
 }
 .resume-wrap h2 {
   font-size: 24px;
@@ -2807,7 +2808,7 @@ h5,
 }
 
 .progress-bar {
-  background: #3e64ff;
+  background: #000000e6;
   -webkit-box-shadow: none;
   box-shadow: none;
   font-size: 12px;
