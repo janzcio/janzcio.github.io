@@ -62,6 +62,11 @@ section {
   display: block;
 }
 
+/* section:hover {
+  background: rgb(241 241 241);
+} */
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -417,6 +422,23 @@ mark,
 .img-fluid {
   max-width: 60%;
   height: auto;
+}
+
+.partner {
+  width: 200px; /* Set your desired width */
+  height: 200px; /* Set your desired height */
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease; /* Adjust the transition duration and timing function as needed */
+}
+
+.partner img {
+  width: 100% !important;
+  transition: transform 0.3s ease; /* Same transition as parent */
+}
+
+.partner:hover img {
+  transform: scale(1.2); /* Adjust the scale factor for zoom level */
 }
 
 .figure {
@@ -2777,10 +2799,10 @@ h5,
   color: rgba(0, 0, 0, 0.7);
 }
 .services-1:hover {
-  background: #3e64ff;
+  background: #000000;
 }
-.services-1:hover .icon i {
-  color: #fff;
+.services-1:hover .icon i, .services-1:hover p , .services-1:hover h3  {
+  color: #fff !important;
 }
 .services-1:hover h3 {
   color: #000000;
