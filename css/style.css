@@ -2777,7 +2777,7 @@ h5,
   content: "";
   width: 30px;
   height: 1px;
-  background: #3e64ff;
+  background: black;
   margin: 0 auto;
 }
 .services-1 .desc h3 a {
@@ -3746,7 +3746,15 @@ textarea.form-control {
   }
 }
 
-.btn-download-cv{
+.btn-dark{
   background: black !important;
+  color: #eeee;
+}
+
+.btn-dark:hover{
   color: white;
+}
+
+.btn-dark:focus{
+  color: #eeee;
 }
