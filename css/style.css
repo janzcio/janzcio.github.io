@@ -2487,13 +2487,13 @@ h5,
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 120px;
+  bottom: 60px;
   z-index: 2;
 }
 
 .mouse-icon {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   border: 1px solid transparent;
   cursor: pointer;
   position: relative;
@@ -2534,7 +2534,7 @@ h5,
 
 @keyframes wheel-up-down {
   100% {
-    margin-top: 25px;
+    margin-top: 17px;
     opacity: 1;
   }
   30% {
