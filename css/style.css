@@ -2266,7 +2266,7 @@ h5,
 .ftco-navbar-light .navbar-nav > .nav-item .nav-link.active {
   background: transparent;
   background: none;
-  color: #3e64ff;
+  color: #000000 !important;
 }
 .ftco-navbar-light .navbar-nav > .nav-item .nav-link.active span:before {
   visibility: visible;
@@ -2276,7 +2276,7 @@ h5,
 }
 @media (max-width: 991.98px) {
   .ftco-navbar-light .navbar-nav > .nav-item.active > a {
-    color: #3e64ff;
+    color: #000000 !important;
   }
 }
 .ftco-navbar-light .navbar-toggler {
