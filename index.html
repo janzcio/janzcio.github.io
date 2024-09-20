@@ -1131,7 +1131,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="external">
+                <div class="external desktop">
                     <div class="horizontal-scroll-wrapper">
                         <div class="img-wrapper">
                             <a href="javascript:void(0);" rel="noopener">
@@ -1172,6 +1172,50 @@
                             <a href="javascript:void(0);" rel="noopener">
                                 <img src="images/Projects/companies/feiwin4.jpg" data-gif="images/Projects/companies/feiwin4.gif" alt="">
                             </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="external mobile">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="img-wrapper">
+                                <img src="images/Projects/companies/feiwin3.jpg" data-gif="images/Projects/companies/feiwin3.gif" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="img-wrapper">
+                                <img src="images/Projects/companies/bywave.jpg" data-gif="images/Projects/companies/bywave.gif" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="img-wrapper">
+                                <img src="images/Projects/companies/bywave2.jpg" data-gif="images/Projects/companies/bywave2.gif" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="img-wrapper">
+                                <img src="images/Projects/companies/crescode.jpg" data-gif="images/Projects/companies/crescode.gif" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="img-wrapper">
+                                <img src="images/Projects/companies/feiwin.jpg" data-gif="images/Projects/companies/feiwin.gif" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="img-wrapper">
+                                <img src="images/Projects/companies/crescode2.jpg" data-gif="images/Projects/companies/crescode2.gif" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="img-wrapper">
+                                <img src="images/Projects/companies/feiwin2.jpg" data-gif="images/Projects/companies/feiwin2.gif" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="img-wrapper">
+                                <img src="images/Projects/companies/feiwin4.jpg" data-gif="images/Projects/companies/feiwin4.gif" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1736,14 +1780,27 @@
             const gifSrc = img.getAttribute('data-gif');
             const staticSrc = img.getAttribute('src');
 
-            img.addEventListener('mouseenter', () => {
-                img.setAttribute('src', gifSrc);
-            });
+            // Detect if the user is on a touch device
+            const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints;
 
-            img.addEventListener('mouseleave', () => {
-                img.setAttribute('src', staticSrc);
-            });
+            if (isTouchDevice) {
+                // For mobile devices, toggle the image source on click
+                img.addEventListener('click', () => {
+                    const currentSrc = img.getAttribute('src');
+                    img.setAttribute('src', currentSrc === staticSrc ? gifSrc : staticSrc);
+                });
+            } else {
+                // For desktop, use hover (mouseenter, mouseleave)
+                img.addEventListener('mouseenter', () => {
+                    img.setAttribute('src', gifSrc);
+                });
+
+                img.addEventListener('mouseleave', () => {
+                    img.setAttribute('src', staticSrc);
+                });
+            }
         });
+
     </script>
 </body>
 </html>

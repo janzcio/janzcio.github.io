@@ -3942,36 +3942,47 @@ textarea.form-control {
 
 
 /* Existing styles above this */
-
+/* Hide the desktop layout on mobile */
 @media (max-width: 768px) {
-  #portfolio-section .horizontal-scroll-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 100%; /* Make the width 100% on mobile */
-    height: auto; /* Let the height adjust to content */
-    transform: none; /* Remove the rotation for vertical stacking */
-    overflow-y: visible; /* Allow vertical scroll if needed */
+  #portfolio-section .external.desktop {
+    display: none; /* Hide desktop on mobile */
   }
 
+  /* Ensure the mobile layout is displayed vertically */
+  #portfolio-section .external.mobile {
+    display: flex;
+    flex-direction: column;
+    height: auto !important;
+  }
+
+  /* Styles for images on mobile */
   #portfolio-section .img-wrapper {
-    transform: none; /* Remove the rotation for vertical stacking */
-    min-height: auto; /* Adjust the height to fit content */
-    width: 100%; /* Ensure images take full width */
-    max-width: none; /* Override max-width set for larger screens */
+    height: fit-content !important;
+    width: 100%; /* Full width */
+    transform: none; /* Remove rotation */
+    cursor: pointer; /* Add pointer cursor */
+    /* transition: transform 0.3s ease; */
   }
 
   #portfolio-section .img-wrapper img {
-    max-width: 100%; /* Ensure the images scale to container width */
-    max-height: auto; /* Allow images to scale vertically */
+    max-width: 100%;
+    max-height: auto;
+    filter: none;
   }
 
-  #portfolio-section .slower,
-  #portfolio-section .faster,
-  #portfolio-section .last {
-    transform: none; /* Remove any additional transforms */
+  /* Effect when the image is clicked or focused */
+  #portfolio-section .img-wrapper:focus-within img,
+  #portfolio-section .img-wrapper:active img {
+    content: attr(data-gif); /* Switch to GIF on click */
+    filter: none; /* Remove any filters on click */
   }
+}
 
-  /* Other specific styles if needed */
+/* Hide the mobile layout on desktop */
+@media (min-width: 769px) {
+  .external.mobile {
+    display: none; /* Hide mobile version on desktop */
+  }
 }
 
 .technologies img {
