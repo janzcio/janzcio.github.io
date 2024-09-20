@@ -3944,6 +3944,10 @@ textarea.form-control {
 /* Existing styles above this */
 /* Hide the desktop layout on mobile */
 @media (max-width: 768px) {
+  #portfolio-section .img-wrapper:hover{
+    min-height: fit-content !important;
+  }
+
   #portfolio-section .external.desktop {
     display: none; /* Hide desktop on mobile */
   }
