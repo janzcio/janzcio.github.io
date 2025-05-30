@@ -2653,6 +2653,14 @@ h5,
   margin: 0;
   padding: 0;
 }
+
+@media (max-width: 767.98px) {
+  #navi ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
 #navi li {
   font-weight: 400;
   list-style: none;
@@ -2700,6 +2708,7 @@ h5,
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-bottom: 10px;
 }
+
 .resume-wrap .icon {
   width: 50px;
   height: 50px;
@@ -2715,6 +2724,17 @@ h5,
 }
 .resume-wrap .text {
   width: calc(100% - 50px);
+  padding-left: 1rem;
+}
+
+@media (max-width: 767.98px) {
+  .resume-wrap .text {
+    padding-left: unset;
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .resume-wrap .date {
   font-weight: 700;
@@ -2722,6 +2742,13 @@ h5,
   color: rgba(0, 0, 0, 0.6);
   color: #000000e6;
 }
+
+@media (max-width: 767.98px) {
+  .resume-wrap .date {
+    text-align: center;
+  }
+}
+
 .resume-wrap h2 {
   font-size: 24px;
   font-weight: 600;
@@ -2730,6 +2757,12 @@ h5,
   font-size: 18px;
   font-weight: 400;
   color: #000000;
+}
+
+@media (max-width: 767.98px) {
+  .resume-wrap .position {
+    text-align: center !important;
+  }
 }
 
 .ftco-partner {
@@ -3766,10 +3799,10 @@ textarea.form-control {
 
 .profile-container {
   margin-top: -90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
 }
 
 .profile-container .img-wrapper {
@@ -3783,10 +3816,7 @@ textarea.form-control {
   align-items: center;
 }
 
-
-
 /* portfolio */
-
 
 /* hide scrollbar */
 #portfolio-section ::-webkit-scrollbar {
@@ -3915,7 +3945,6 @@ textarea.form-control {
   filter: saturate(40%) sepia(30%) hue-rotate(5deg);
 }
 
-
 #portfolio-section a:hover img {
   filter: none;
 }
@@ -3938,13 +3967,10 @@ textarea.form-control {
   content: attr(data-gif);
 }
 
-
-
-
 /* Existing styles above this */
 /* Hide the desktop layout on mobile */
 @media (max-width: 768px) {
-  #portfolio-section .img-wrapper:hover{
+  #portfolio-section .img-wrapper:hover {
     min-height: fit-content !important;
   }
 
@@ -3990,8 +4016,58 @@ textarea.form-control {
 }
 
 .technologies img {
-  width: 100px;  /* Set the desired width */
+  width: 100px; /* Set the desired width */
   height: 100px; /* Set the desired height */
-  object-fit: contain;  /* Ensure the image keeps its aspect ratio */
+  object-fit: contain; /* Ensure the image keeps its aspect ratio */
 }
 
+.profile-container2 {
+  margin-top: -90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.profile-container2 img {
+  border-radius: 100%;
+  border: 1px #0000002b solid;
+}
+
+#services-3 {
+  height: fit-content !important;
+}
+
+.text-start {
+  text-align: justify !important;
+}
+
+@media (max-width: 768px) {
+  #page-1 h2,
+  #page-2 h2,
+  #page-3 h2 {
+    text-align: center;
+  }
+
+  #page-1 .resume-wrap,
+  #page-2 .resume-wrap,
+  #page-3 .resume-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  #page-1 .school-logo-container,
+  #page-2 .school-logo-container,
+  #page-3 .school-logo-container {
+    width: 100%;
+    background: transparent;
+  }
+
+  .experience-icon-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
