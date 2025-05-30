@@ -4037,6 +4037,13 @@ textarea.form-control {
   width: 8rem;
 }
 
+@media (max-width: 768px) {
+  .profile-container2 img {
+    height: 5rem;
+    width: 5rem;
+  }
+}
+
 /* #services-3 {
   height: fit-content !important;
 } */
