@@ -4032,11 +4032,13 @@ textarea.form-control {
 .profile-container2 img {
   border-radius: 100%;
   border: 1px #0000002b solid;
+  height: 8rem;
+  width: 8rem;
 }
 
-#services-3 {
+/* #services-3 {
   height: fit-content !important;
-}
+} */
 
 .text-start {
   text-align: justify !important;
@@ -4084,38 +4086,53 @@ body {
   pointer-events: none;
   position: fixed;
   z-index: 0;
-  top: 0; left: 0; width: 100vw; height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
 }
 
 /* Gravity dots and bubbles */
-.gravity-dot, .bubble {
+.gravity-dot,
+.bubble {
   position: absolute;
   border-radius: 50%;
   opacity: 0.13;
   animation: gravity-fall 10s linear infinite;
   filter: blur(0.5px);
-  box-shadow: 0 0 24px 4px rgba(62,100,255,0.08), 0 0 0 2px rgba(62,100,255,0.03) inset;
+  box-shadow: 0 0 24px 4px rgba(62, 100, 255, 0.08),
+    0 0 0 2px rgba(62, 100, 255, 0.03) inset;
   background: radial-gradient(circle at 30% 30%, #3e64ff 60%, #00bfff 100%);
 }
 
 /* Add color variety for dots/bubbles */
-.gravity-dot:nth-child(2n) { background: radial-gradient(circle at 70% 70%, #00bfff 60%, #3e64ff 100%); }
-.gravity-dot:nth-child(3n) { background: radial-gradient(circle at 50% 50%, #ffe066 60%, #3e64ff 100%); }
-.gravity-dot:nth-child(4n) { background: radial-gradient(circle at 60% 40%, #00ff90 60%, #3e64ff 100%); }
-.gravity-dot:nth-child(5n) { background: radial-gradient(circle at 40% 60%, #ff2e63 60%, #3e64ff 100%); }
+.gravity-dot:nth-child(2n) {
+  background: radial-gradient(circle at 70% 70%, #00bfff 60%, #3e64ff 100%);
+}
+.gravity-dot:nth-child(3n) {
+  background: radial-gradient(circle at 50% 50%, #ffe066 60%, #3e64ff 100%);
+}
+.gravity-dot:nth-child(4n) {
+  background: radial-gradient(circle at 60% 40%, #00ff90 60%, #3e64ff 100%);
+}
+.gravity-dot:nth-child(5n) {
+  background: radial-gradient(circle at 40% 60%, #ff2e63 60%, #3e64ff 100%);
+}
 
 /* Optional: Add a subtle floating effect */
-.gravity-dot, .bubble {
-  animation-timing-function: cubic-bezier(0.45,0.05,0.55,0.95);
+.gravity-dot,
+.bubble {
+  animation-timing-function: cubic-bezier(0.45, 0.05, 0.55, 0.95);
 }
 
 /* Bubbles float up, dots fall down */
 .bubble {
   animation: bubble-up 14s linear infinite;
-  opacity: 0.10;
+  opacity: 0.1;
   background: radial-gradient(circle at 60% 40%, #00bfff 60%, #fff 100%);
-  box-shadow: 0 0 32px 8px rgba(0,191,255,0.08), 0 0 0 2px rgba(0,191,255,0.03) inset;
+  box-shadow: 0 0 32px 8px rgba(0, 191, 255, 0.08),
+    0 0 0 2px rgba(0, 191, 255, 0.03) inset;
 }
 
 /* Keyframes for falling dots */
@@ -4139,11 +4156,11 @@ body {
 @keyframes bubble-up {
   0% {
     bottom: -10vh;
-    opacity: 0.10;
+    opacity: 0.1;
     transform: scale(1) translateY(0) rotate(0deg);
   }
   60% {
-    opacity: 0.10;
+    opacity: 0.1;
   }
   100% {
     bottom: 110vh;
