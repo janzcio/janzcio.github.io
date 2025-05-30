@@ -2349,6 +2349,7 @@ h5,
   -webkit-transition: 0.3s all ease-out;
   -o-transition: 0.3s all ease-out;
   transition: 0.3s all ease-out;
+  z-index: 2;
 }
 .ftco-navbar-light.scrolled.sleep {
   -webkit-transition: 0.3s all ease-out;
