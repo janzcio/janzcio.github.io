@@ -30,8 +30,8 @@ AOS.init({
 	// loader
 	var loader = function () {
 		setTimeout(function () {
-			if ($('#ftco-loader').length > 0) {
-				$('#ftco-loader').removeClass('show');
+			if ($('#jmi-loader').length > 0) {
+				$('#jmi-loader').removeClass('show');
 			}
 		}, 1);
 	};
@@ -49,7 +49,7 @@ AOS.init({
 
 			event.preventDefault();
 
-			if ($('#ftco-nav').is(':visible')) {
+			if ($('#jmi-nav').is(':visible')) {
 				$(this).removeClass('active');
 			} else {
 				$(this).addClass('active');
@@ -66,7 +66,7 @@ AOS.init({
 	var onePageClick = function () {
 
 
-		$(document).on('click', '#ftco-nav a[href^="#"]', function (event) {
+		$(document).on('click', '#jmi-nav a[href^="#"]', function (event) {
 			event.preventDefault();
 
 			var href = $.attr(this, 'href');
@@ -138,7 +138,7 @@ AOS.init({
 		$(window).scroll(function () {
 			var $w = $(this),
 				st = $w.scrollTop(),
-				navbar = $('.ftco_navbar'),
+				navbar = $('.jmi_navbar'),
 				sd = $('.js-scroll-wrap');
 
 			if (st > 150) {
@@ -177,9 +177,9 @@ AOS.init({
 
 	var counter = function () {
 
-		$('#section-counter, .hero-wrap, .ftco-counter, .ftco-about').waypoint(function (direction) {
+		$('#section-counter, .hero-wrap, .jmi-counter, .jmi-about').waypoint(function (direction) {
 
-			if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
+			if (direction === 'down' && !$(this.element).hasClass('jmi-animated')) {
 
 				var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
 				$('.number').each(function () {
@@ -204,27 +204,27 @@ AOS.init({
 
 	var contentWayPoint = function () {
 		var i = 0;
-		$('.ftco-animate').waypoint(function (direction) {
+		$('.jmi-animate').waypoint(function (direction) {
 
-			if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
+			if (direction === 'down' && !$(this.element).hasClass('jmi-animated')) {
 
 				i++;
 
 				$(this.element).addClass('item-animate');
 				setTimeout(function () {
 
-					$('body .ftco-animate.item-animate').each(function (k) {
+					$('body .jmi-animate.item-animate').each(function (k) {
 						var el = $(this);
 						setTimeout(function () {
 							var effect = el.data('animate-effect');
 							if (effect === 'fadeIn') {
-								el.addClass('fadeIn ftco-animated');
+								el.addClass('fadeIn jmi-animated');
 							} else if (effect === 'fadeInLeft') {
-								el.addClass('fadeInLeft ftco-animated');
+								el.addClass('fadeInLeft jmi-animated');
 							} else if (effect === 'fadeInRight') {
-								el.addClass('fadeInRight ftco-animated');
+								el.addClass('fadeInRight jmi-animated');
 							} else {
-								el.addClass('fadeInUp ftco-animated');
+								el.addClass('fadeInUp jmi-animated');
 							}
 							el.removeClass('item-animate');
 						}, k * 50, 'easeInOutExpo');
